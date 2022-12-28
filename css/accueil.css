@@ -1,0 +1,355 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Seymour One', sans-serif;
+}
+
+.header ul .moon {
+    width: 35px;
+    position: relative;
+    left: 1em;
+    top: 0em;
+    cursor: pointer;
+    display: none;
+}
+
+.header ul .sun {
+    width: 35px;
+    position: relative;
+    left: 1em;
+    top: 0em;
+    cursor: pointer;
+}
+
+.header {
+    background-color: rgb(52, 52, 52);
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+  .header li .logoSvg{
+    width: 50px;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #787878;
+    color: rgb(52, 52, 52);
+  }
+  
+  .header .logo {
+    display: block;
+    font-size: 2em;
+    padding: 15px 20px;
+    text-decoration: none;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    width: 100%;
+    background-color: rgb(52, 52, 52);
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    background: darkgrey;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 300px;
+    margin-bottom: 1em;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  @media (min-width: 600px) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 30px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: left;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+
+    .header ul .moon {
+        width: 20px;
+        cursor: pointer;
+        display: none;
+        padding: 25px 30px;
+    }
+    
+    .header ul .sun {
+        width: 20px;
+        cursor: pointer;
+        display: block;
+        padding: 25px 30px;
+    }
+    
+  }
+
+
+#titleBlock {
+    padding: 15em 0 5em 0;
+    background-image: url('../img/guitare.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+#titleBlock .leftContain {
+    background-color: rgb(61, 61, 61, 0.5);
+    width: 60%;
+    padding: 2em;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+
+#titleBlock .leftContain h1 {
+    margin-top: 0;
+    color: whitesmoke;
+}
+
+#titleBlock .leftContain p {
+    color: whitesmoke;
+}
+
+#parallaxContain {
+    height: 150px;
+    width: 100%;
+    background-image: url('../img/kettlebell.jpg');
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+}
+
+#lastBloc {
+    padding: 2em 0 2em 0;
+    display: flex;
+    gap: 2em;
+    background-color: whitesmoke;
+}
+
+#lastBloc .leftBloc {
+    width: 50%;
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#lastBloc .leftBloc h2 {
+    margin: 0;
+}
+
+#lastBloc .rightBloc {
+    width: 50%;
+}
+
+#lastBloc .rightBloc {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-right: 5%;
+
+}
+
+#lastBloc .rightBloc a {
+    width: 100%;
+    height: 160px;
+    background-size: cover;
+    background-position: left;
+    border-radius: 70px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 2px 20px 2px gray;
+}
+
+#lastBloc .rightBloc .crossfitLien {
+    background-image: url('../img/crossfit.jpg');
+}
+
+#lastBloc .rightBloc .musiqueLien {
+    background-image: url('../img/guitariste.jpg');
+}
+
+#lastBloc .rightBloc a:hover {
+    opacity: 0.5;
+}
+
+.footerNav{
+    background-color: rgb(52, 52, 52);
+    color: whitesmoke;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.footerNav ul {
+    display: flex;
+    gap: 5em;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.footerNav ul li{
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.footerNav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 0.2s ease-in-out;
+}
+
+.footerNav ul li a:hover{
+    border-bottom: 2px solid white;
+}
+
+@media screen and (max-width: 600px) {
+    #lastBloc {
+        flex-direction: column;
+    }
+    #lastBloc .leftBloc {
+        width: 90%;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    #lastBloc .rightBloc {
+        margin-right: 5%;
+        margin-left: 5%;
+        width: 90%;
+    }
+    #titleBlock .leftContain {
+        width: 80%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #titleBlock {
+        display: flex;
+        justify-content: center;
+        padding: 10em 0 5em 0;
+    }
+  }
+
+#modal {
+    background-color: black;
+    color: whitesmoke;
+    padding: 2em;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    padding-top: 5em;
+    display: none;
+}
+
+#modal .closeModal {
+  font-size: 30px;
+  position: absolute;
+  left: 95%;
+  top: 10%;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+#modal .closeModal:hover {
+  color: rgb(189, 49, 49);
+}
+
+#modal input {
+  border: none;
+  border-radius: 15px;
+  width: 60px;
+  cursor: pointer;
+  border: solid black 2px;
+}
+
+#modal .jcolor-input {
+  padding-right: 0!important;
+}

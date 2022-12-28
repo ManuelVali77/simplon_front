@@ -1,0 +1,353 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Seymour One', sans-serif;
+}
+
+.header ul .moon {
+    width: 35px;
+    position: relative;
+    left: 1em;
+    top: 0em;
+    cursor: pointer;
+    display: none;
+}
+
+.header ul .sun {
+    width: 35px;
+    position: relative;
+    left: 1em;
+    top: 0em;
+    cursor: pointer;
+}
+
+.header {
+    background-color: rgb(52, 52, 52);
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+
+
+  .header li .logoSvg{
+    width: 50px;
+  }
+
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #787878;
+    color: rgb(52, 52, 52);
+  }
+  
+  .header .logo {
+    display: block;
+    font-size: 2em;
+    padding: 15px 20px;
+    text-decoration: none;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    width: 100%;
+    background-color: rgb(52, 52, 52);
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    background: darkgrey;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 300px;
+    margin-bottom: 1em;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  @media (min-width: 600px) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 30px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: left;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+
+    .header ul .moon {
+      width: 20px;
+      cursor: pointer;
+      display: none;
+      padding: 25px 30px;
+  }
+  
+  .header ul .sun {
+      width: 20px;
+      cursor: pointer;
+      display: block;
+      padding: 25px 30px;
+  }
+    
+  }
+
+
+
+#formulaireContain {
+    height: 89vh;
+    background-size: cover;
+    padding-top: 3em;
+    -webkit-animation-name: bgAn;
+    -webkit-animation-duration: 100s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+    }
+
+@-webkit-keyframes bgAn {
+    0% {
+      background-image: url('../img/metro.jpg');
+    }
+    20% {
+      background-image: url('../img/bg-1.jpg');
+    }
+    40% {
+      background-image: url('../img/bg-2.jpg');
+    }
+    60% {
+      background-image: url('../img/bg-3.jpg');
+    }
+    80% {
+      background-image: url('../img/bg-4.jpg');
+    }
+    100% {
+      background-image: url('../img/bg-5.jpg');
+    }
+  }
+
+#formulaireContain .fullContain{
+    height: 89vh;
+    background-color: rgb(15, 15, 15,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#formulaireContain .fullContain h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 3em;
+    color: white;
+}
+
+#formulaireContain .fullContain .formContain {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+#formulaireContain .fullContain .formContain label {
+    color: white;
+    margin-bottom: 0.2em;
+}
+
+
+#formulaireContain .fullContain .formContain #iconeId {
+background-image: url('../img/user-solid.svg');
+  background-repeat: no-repeat;
+  background-position: 10px 13px;
+  background-size: 20px 20px;
+  padding-left: 3em;
+  border: none;
+}
+
+#formulaireContain .fullContain .formContain #iconeMdp {
+    background-image: url('../img/unlock-solid.svg');
+  background-repeat: no-repeat;
+  background-position: 10px 13px;
+  background-size: 20px 20px;
+  padding-left: 3em;
+  border: none;
+}
+
+#formulaireContain .fullContain .formContain input {
+    margin-bottom: 1em;
+    padding: 1.3em;
+    border-radius: 5px;
+}
+
+#formulaireContain .fullContain .formContain .error {
+    color: red;
+    margin-top: 0;
+}
+
+#formulaireContain .fullContain .formContain button {
+    padding: 1.3em;
+    margin-top: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: large;
+    animation: col 15s infinite
+}
+
+@keyframes col  {
+    0% {background-color: rgb(39 140 126)}
+    20% {background-color:rgb(71, 162, 71)} 
+    40% {background-color:rgb(162, 91, 71)}
+    60% {background-color:rgb(119, 71, 162)}
+    80% {background-color:rgb(162, 154, 71)}
+    100% {background-color: rgb(39 140 126)}
+}
+
+
+
+
+
+.footerNav{
+    background-color: rgb(52, 52, 52);
+    color: whitesmoke;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.footerNav ul {
+    display: flex;
+    gap: 5em;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.footerNav ul li{
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.footerNav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 0.2s ease-in-out;
+}
+
+.footerNav ul li a:hover{
+    border-bottom: 2px solid white;
+}
+
+@media screen and (max-width: 600px) {
+    #formulaireContain .fullContain .formContain {
+        width: 90%;
+    }
+}
+
+#modal {
+  background-color: black;
+  color: whitesmoke;
+  padding: 2em;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  padding-top: 5em;
+  display: none;
+}
+
+#modal .closeModal {
+font-size: 30px;
+position: absolute;
+left: 95%;
+top: 10%;
+transition: 0.2s ease-in-out;
+cursor: pointer;
+}
+
+#modal .closeModal:hover {
+color: rgb(189, 49, 49);
+}
